@@ -1,0 +1,64 @@
+<view class="container carts-list">
+  <view class="count_sum">
+    <view wx:for="{{list}}"  class="carts-item" data-title="{{item.title}}" data-url="{{item.url}}" bindtap="bindViewTap">
+      <icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-rec_id="{{item.rec_id}}"/>
+      <icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-rec_id="{{item.rec_id}}"/>
+      <view>
+        <image class="carts-image" src="{{baseUrl}}{{item.goods_thumb}}" mode="aspectFill"/>
+      </view>
+      <view class="carts-text">
+        <text class="carts-title">{{item.goods_name}}</text>
+        <view class='deleteView' bindtap='deleteCars' data-goods_supplier_id='{{item.goods_supplier_id}}' data-rec_id="{{item.rec_id}}" >
+          <image class='deleteimg' src='../../images/delete.png'></image>
+        </view>
+        <view class="tag">¥{{item.goods_price}}/（{{item.goods_brief}}）</view>
+        <view class="carts-subtitle">
+          <text class="carts-price">小计:{{item.add_price}}元</text>
+          <view class="stepper">
+             <!-- 减号 -->
+             <text data-goods_supplier_id='{{item.goods_supplier_id}}' data-goods_number='{{item.goods_number}}' data-rec_id="{{item.rec_id}}" bindtap="bindMinus">-</text>
+             <!-- 数值 -->
+             <input type="number" bindchange="bindManual" value="{{item.goods_number}}" />
+             <!-- 加号 -->
+             <text class="normal_select" 
+             data-goods_supplier_id='{{item.goods_supplier_id}}'           
+             data-goods_number='{{item.goods_number}}'
+             data-rec_id="{{item.rec_id}}" 
+             data-brand_id="{{item.brand_id}}" 
+             data-goods_id="{{item.goods_id}}" 
+             bindtap="bindPlus">+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="carts-sum carts-sum1">
+  <!-- <view >绿时鲜配送</view> -->
+  <image class='peis' src='../../images/cart_02.png'></image>
+  <!-- <view class='peis1'>再买<text>¥63.05</text>起送</view> -->
+  <view class='peis1'>满79免配送费</view>
+  <view class='peis2' bindtap='goToBuyMore'>去凑单></view>
+ </view>
+<view class="carts-sum">
+  <view class="carts-footer">
+    <view bindtap="bindSelectAll" class="selectAll">
+       <icon wx:if="{{selectedAllStatus}}" type="success_circle" size="20"/>
+       <icon wx:else type="circle" size="20" />
+       <text>全选</text>
+    </view>
+  </view>
+   <view class="sumAll">
+     <text class="sumText"><text class="price">合计:<text>￥{{sumNum}}元</text></text></text>
+     <!-- <text class="sumText1">（含押金0.00元）</text> -->
+   </view>
+   <view class="button" bindtap='goToJieSuan'>去结算
+   <!-- <text>已优惠¥2.55</text> -->
+   </view>
+ </view>
+
+
+
+
+
+

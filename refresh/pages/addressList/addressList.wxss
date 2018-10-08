@@ -1,0 +1,49 @@
+/* pages/address1/address1.wxss */
+page{
+  background-color: #f0f0f0;
+}
+.myself{
+  background-color: #ffffff;
+}
+.myself .myself_list{
+  overflow: hidden;
+  padding: 20rpx 30rpx;
+}
+.myself .myself_list .t1{
+  font-size: 30rpx;
+  color: #3b3b3b;
+  line-height: 43rpx;
+  float: left;
+}
+.myself .myself_list text{
+  font-size: 30rpx;
+  color: #3b3b3b;
+  line-height: 43rpx;
+  display: block;
+}
+.myself .myself_list .im{
+  float: right;
+  margin-left: 20rpx;
+  width: 22rpx;
+  height: 40rpx;
+  margin-top: 23rpx;
+}
+.add{
+  text-align: right;
+  font-size: 37rpx;
+  line-height: 66rpx;
+  color: #313131;
+  margin: 0 30rpx;
+}
+.js_btn{
+  background-color: #75be0d;
+  font-size: 32rpx;
+  color: #ffffff;
+  line-height: 85rpx;
+  height: 85rpx;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 0;
+}

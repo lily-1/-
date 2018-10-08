@@ -1,0 +1,46 @@
+/* pages/customer/customer.wxss */
+.myhead{
+  height: 50rpx;
+  width: 100%;
+  position: relative;
+}
+.myhead .myhead_top{
+  position: absolute;
+  height: 313rpx;
+  width: 94%;
+  background-color: #75be0d;
+  border-radius: 14rpx;
+  top: 20rpx;
+  left: 3%;
+   -moz-box-shadow: 0px 5px 10px #e0e0e0; /* 老的 Firefox */
+  box-shadow: 0px 5px 10px #e0e0e0;
+}
+.myhead .myhead_top .myhead_topdetail{
+  height: 226rpx;
+  background-color: #fff;
+  border-radius: 14rpx;
+  padding-top: 74rpx;
+  overflow: hidden;
+}
+.myhead .myhead_top .myhead_topdetail .left_one{
+  float: left;
+  width: 50%;
+}
+.myhead .myhead_top .myhead_topdetail .left_one image{
+  display: block;
+  margin: 0 auto;
+  width: 85rpx;
+  height: 101rpx;
+}
+.myhead .myhead_top .myhead_topdetail .left_one .left_text{
+  text-align: center;
+  font-size: 30rpx;
+  color: #464646;
+  margin-top: 20rpx;
+}
+.cus{
+  margin: 320rpx 3% 0;
+  font-size: 30rpx;
+  color: #464646;
+  line-height: 48rpx;
+}

@@ -1,0 +1,45 @@
+/*弹出窗  */
+.dialog{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:rgba(0, 0, 0,0.3);
+  width: 100%;
+  height: 100%;
+}
+.makeWg{
+  width: 430rpx;
+  height: 520rpx;
+  padding:40rpx 30rpx;
+  background:rgba(255, 255, 255, 1);
+  margin: 300rpx auto 0;
+  z-index: 999;
+}
+.close{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto;
+}
+.close image{
+  width: 100%;
+  height: 100%;
+}
+.radio-group{
+   display: flex;
+   color: #8f8f8f;
+   font-size: 30rpx;
+   margin-top: 40rpx;
+   flex-direction: column;
+}
+.radio{
+  margin-top: 20rpx;
+  display: inline-block;
+}
+.but{
+  background-color: #008cfd;
+  color: #fff;
+  font-size: 20rpx;
+  width: 200rpx;
+  height: 50rpx;
+  margin: 30rpx auto 0;
+}

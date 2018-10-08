@@ -1,0 +1,139 @@
+<!--pages/orderjs/orderjs.wxml-->
+<view class='orderjs_head'>
+  <view class='orderjs_im'>
+    <image src=''></image>
+  </view>
+  <view class='orderjs_right'>
+    <view class='orderjs_righth'>{{addresInfo.userName}}    {{addresInfo.telNumber}}</view>
+
+    <view class='orderjs_righth'>{{addresInfo.provinceName}} {{addresInfo.cityName}} {{addresInfo.countyName}}  {{addresInfo.detailInfo}} </view>
+  </view>
+  <view class='r1'>
+    <image src=''></image>
+  </view>
+  <image class='bg' src='../../images/bg_03.png'></image>
+</view>
+
+
+<!--送达时间  -->
+<view class='order_time'>
+    <view class='order_timeLeft'>送达或自提时间</view>
+      <view class="section">
+        <picker bindchange="bindDayTimerChange" value="{{index}}" range="{{DayTime}}" style='float:left'>
+          <view class="picker">
+            当前选择：{{DayTime[index]}}
+          </view>
+        </picker>
+
+        <picker mode="time" value="{{time}}" start="8:00" end="20:00" bindchange="bindTimeChange">
+          <view class="picker">
+            选择时间: {{time}}
+          </view>
+        </picker>
+    </view>
+    <view class='text-detail'>温馨提示: 送达或自提时间最早均为下单后40分钟，请仔细选择下单时间！</view>
+    <image class='bg' src='../../images/bg_03.png'></image>
+</view> 
+
+
+<!--送达时间  -->
+<!-- <view class='order_time' style='background: url(/images/js1.png) no-repeat;background-size: contain;'>
+  <view class='order_timeLeft'>送达或自提时间</view>
+<view class="section"> -->
+  <!-- <view class="section__title">时间选择器</view> -->
+
+<!--   
+</view>
+</view> -->
+<!--产品信息  -->
+<view class='order_detail' >
+  <view class='order_product' wx:for="{{cartList}}">
+    <view class='product_im'>
+      <image src='{{baseUrl}}{{item.goods_thumb}}' mode='aspectFit'></image>
+    </view>
+    <view class='product_detail' >
+      <view class='text1'>
+      {{item.goods_name}}
+      </view>
+      <!-- <view class='text1'>规格：</view> -->
+      <view class='text1'>
+      ¥{{item.goods_price}}x{{item.goods_number}}{{item.goods_brief}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='order_detail' >
+
+  <view class='product_btn'>共{{lengthCart}}件</view>
+  <view class='product_Wz'>商品金额：¥{{sumNum}}元</view>
+</view>
+
+
+<view class='order_detail' >
+  <view class='product_Wz'>
+
+<radio-group class="radio-group" bindchange="radioChangepayMoneyType">
+  支付方式：
+  <label class="radio" wx:for="{{payMoneyType}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+</view>
+</view>
+<view class='order_detail' >
+ <view class='product_Wz'>
+<radio-group class="radio-group" bindchange="radioChange">
+配送方式：
+  <label class="radio" wx:for="{{peiSongType}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+
+</view>
+</view>
+<view class='order_detail' >
+ <view class='product_Wz'>
+
+    <view wx:if="{{peisongShow == true}}">
+    <!-- <view> -->
+    配送费：
+      <text class='peisongcss' wx:if="{{sumNum < 79 && sumNum >= 29}}">¥4元</text>
+      <text  class='peisongcss'  wx:if="{{sumNum >= 79}}">免费</text>
+      <text  class='peisongcss'  wx:if="{{sumNum < 29}}" >不可配送</text>
+    </view>
+
+    
+  </view>
+  <view class='product_Wz' wx:if="{{peisongShow == true}}"> 
+    <text>29元起送，79元免运费。无门槛自提。</text>
+  </view>  
+
+  <view class='product_Wz' wx:if="{{peisongShow == false}}">
+  <!-- <view> -->
+  自提点：<text>{{market_name}}</text>
+      
+      <view>地址：{{address}}</view>
+
+      </view>
+</view>
+<view class='order_detail' >
+ <view class='product_Wz111'>
+
+  <view class='zitiyouhuijia'>优惠券</view>
+  <view bindtap='goToYHJ'>
+    <image class='hongbao' src='../../images/hongbao.png'></image>
+  </view>
+  <view class='quxuanze' bindtap='goToYHJ'>{{yhMoney}}</view>
+  <view bindtap='goToYHJ' class='jiantou'>
+    >
+  </view>
+
+</view>
+</view>
+<view class='order_detail' >
+ <view class='product_Wz'>
+    <view class='je'><text>实付金额:</text>{{actureFee}}元</view>
+  <button class='js_btn' type='button' name='' bindtap='bindspayMoney'>提交订单</button>
+</view>
+</view>

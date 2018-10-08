@@ -1,0 +1,18 @@
+<!--pages/shopdetail/shopdetail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='shopcar_banner'>
+  <image src='{{baseUrl}}{{info.goods_thumb}}'></image>
+</view>
+<view class='detail'>
+  <view class='name'>{{info.goods_name}}</view>
+  <view class='jieshao'>规格：{{info.goods_brief}}</view>
+  <view class='pric'>价格：{{info.sale_price}}元</view>
+  <view class='miaoshu'>
+  <view class='shop_head'>
+    <view class='head_l'></view>
+    <view class='head_text'>产品详情</view>
+    <view class='head_r'></view>
+  </view>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+  </view>
+</view>

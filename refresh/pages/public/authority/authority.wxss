@@ -1,0 +1,31 @@
+/*获取权限  */
+.pos_fixed{
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color:rgba(0,0,0,0.7);
+}
+.pos_fixed .pos_cont{
+  background-color: #ffffff;
+  margin-left: 15%;
+  width: 70%;
+  margin-top: 50%;
+  border-radius: 8rpx;
+}
+.pos_fixed .pos_cont .pos_conttext{
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 180rpx;
+}
+.pos_fixed .pos_cont .pos_btn{
+  background-color: #f8f8f8;
+  text-align: center;
+  line-height: 72rpx;
+  border: 1px solid #e2e2e2;
+  border-radius: 5rpx;
+  font-size: 30rpx;
+  cursor: pointer;
+}

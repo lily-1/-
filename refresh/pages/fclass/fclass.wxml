@@ -1,0 +1,91 @@
+<!--pages/fclass/fclass.wxml-->
+<view class='seard'>
+  <view class='log'>
+    <image src='/images/logo_03.png'></image>
+  </view>
+  <view class='header_sear'>
+    <input type='text' placeholder='请输入'></input>
+    <image src='/images/sear_03.png'></image>
+  </view>
+</view>
+<view >
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view wx:for="{{cat_list}}" wx:if="{{item.cat_id == cat_id}}" class="tab-item active" bindtap="swichNav" data-cat_id='{{item.cat_id}}'>
+          {{item.cat_name}}
+          
+        </view>
+       
+
+
+        
+
+
+
+        <view wx:for="{{cat_list}}" wx:if="{{item.cat_id != cat_id}}" class="tab-item" bindtap="swichNav" data-cat_id='{{item.cat_id}}'>
+          {{item.cat_name}}
+        </view>
+    </scroll-view>
+
+    
+    
+
+<view class="help-content" wx:if='{{showCateList}}' bindtap='showCateStatus'>
+  <view class='classify-list'>
+    <view class="help-text" wx:for="{{cat_list}}" bindtap="swichNav" data-cat_id='{{item.cat_id}}'> {{item.cat_name}}
+  </view>
+  </view>
+</view>
+
+<!-- 修改横向滚动的问题 -->
+</view>
+<view class="tab-content"> 
+  <view class="scoll-h" >
+  <!-- 这是左边 -->
+    <view class="top-tab flex-wrp flex-tab " >
+      <view wx:if="{{itemName.cat_id == son_cat_id}}" class="toptab flex-item active" wx:for="{{son_list}}" wx:for-item="itemName"  bindtap="switchTab1">
+        {{itemName.cat_name}}
+      </view>
+      <view wx:if="{{itemName.cat_id != son_cat_id}}" class="toptab flex-item" wx:for="{{son_list}}" wx:for-item="itemName"  bindtap="switchTab1" data-son_cat_id='{{itemName.cat_id}}'>
+        {{itemName.cat_name}}
+      </view>
+    </view>
+    <!-- 这是右边 -->
+    <scroll-view scroll-y="true" class="cont discovery withtab" bindscrolltoupper="upper" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view class="ctnt0">
+      <view class="item-ans"  wx:for='{{goods_list}}' wx:for-item="itemGood">
+          <view class="avatar">
+              <image bindtap='detailURL'
+                data-goods_supplier_id='{{itemGood.goods_supplier_id}}'
+                data-goods_id="{{itemGood.goods_id}}"
+                class="img" src="{{baseUrl}}{{itemGood.goods_thumb}}"></image>
+          </view>
+          <view class="expertInfo">
+              <view class="name">{{itemGood.goods_name}}</view>
+              <view class='fcla-yishou'>已售</view>
+              <view class="tag">规格：{{itemGood.goods_brief}}</view>
+              <view class="answerHistory">
+              <!-- <text class='t1'>降</text> -->
+                ¥{{itemGood.sale_price}} 元
+              <!-- <text class='t2'>{{item.product_jj1}}</text> 划线价格  -->
+              </view>
+          </view>
+          <view class="askBtn" bindtap='addCart' 
+          data-goods_supplier_id='{{itemGood.goods_supplier_id}}' 
+          data-supplier_id='{{itemGood.supplier_id}}' 
+          data-goods_id="{{itemGood.goods_id}}"
+          data-cat_id="{{itemGood.cat_id}}"
+          >
+          +
+          </view> 
+      </view>
+    </view>
+    </scroll-view>
+            </view>
+        </view>
+
+<view wx:if='{{showCateList == true}}' class='more' bindtap='showCateStatus'>
+  <image  class="imagesImg" src='../../images/yjt_06.jpg'></image>
+</view>
+<view wx:if='{{showCateList == false}}' class='more' bindtap='showCateStatus'> 
+  <image  class="imagesImg" src='../../images/xiangxia.png'></image>
+</view>

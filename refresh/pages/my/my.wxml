@@ -1,0 +1,78 @@
+<!--pages/my/my.wxml-->
+<!--头部  -->
+<view class='myhead'>
+  <view class='myhead_top'>
+    <view class='myhead_topdetail'>
+      <view class='mytx'>
+        <image src='{{avatarUrl}}'></image>
+      </view>
+      <view class='myname'>{{nickName}}</view>
+      <!-- <view class='myxinxi'>个人信息></view> -->
+    </view>
+  </view>
+</view>
+<!--优惠卷  -->
+<view class='yhj'>
+  <view class='yhj_left'>
+    <view class='yhj_pric'>¥{{userData.user_money}}</view>
+    <view class='yhj_ye'>余额</view>
+  </view>
+  <view class='yhj_right' bindtap='yhj_URL'>
+    <view class='yhj_pric' wx:if="{{yhjNumber >= 1}}">{{yhjNumber}}</view>
+     <view class='yhj_pric' wx:if="{{yhjNumber == 0}}">{{yhjNumber}}</view>
+
+
+    <view class='yhj_ye'>优惠券</view>
+  </view>
+</view>
+<!--我的订单  -->
+<view class='myorder'>我的订单<text bindtap='viewMoreOrder'>查看更多订单></text></view>
+<!--  -->
+<view class='list'>
+  <view class='list_li'>
+    <image src='/images/my_list1.png'></image>
+    <view class='list_text'>待分拣</view>
+  </view>
+  <view class='list_li'>
+    <image src='/images/my_list2.png'></image>
+    <view class='list_text'>待自提</view>
+  </view>
+  <view class='list_li'>
+    <image src='/images/my_list3.png'></image>
+    <view class='list_text'>配送中</view>
+  </view>
+  <view class='list_li'>
+    <image src='/images/my_list4.png'></image>
+    <view class='list_text'>已完成</view>
+  </view>
+</view>
+<!--在线充值  -->
+<view class='zx_up'>
+  <view class='zxtop'>在线充值</view>
+  <view class='zxyhj'>
+    <view class='zxyhj_li' wx:for="{{cartList}}">
+        <view class='zxyhj_libj' style='background: url(/images/yhj.png) no-repeat;background-size: contain;'>
+          <view class='zxyhj_lipric'>¥{{item.type_money}}</view>
+          <view class='zxyhj_lipric1'>现在购买立减{{item.youhui}}元</view>
+        </view>
+        <view class='btn' bindtap='lijichongzhi' data-id='{{item.type_id}}'>立即充值</view>
+    </view>
+
+   
+  </view>
+</view>
+<!--问题  -->
+<!-- <view class='list1'>
+  <view class='list_li' bindtap=''>
+    <image src='/images/wt.png'></image>
+    <view class='list_text'>常见问题</view>
+  </view>
+  <view class='list_li'>
+    <image src='/images/wt.png'></image>
+    <view class='list_text'>快速反馈</view>
+  </view>
+  <view class='list_li'>
+    <image src='/images/wt.png'></image>
+    <view class='list_text'>反馈历史</view>
+  </view>
+</view> -->

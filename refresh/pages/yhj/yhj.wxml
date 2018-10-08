@@ -1,0 +1,56 @@
+<!--pages/yhj/yhj.wxml-->
+<view class="top-tab flex-wrp flex-tab " >
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab1">
+    {{itemName}}
+  </view>
+</view>
+
+<view class="section" wx:for="{{yhjList}}" wx:if="{{currentNavtab < 1 && item.canUse ==1}}" > 
+      
+      <view class='leftcon fl'>
+      <view class='leftconpric' style='font-size:32rpx;'>¥ {{item.act_type_ext}}元</view>
+      <view class='leftconpric'>满{{item.min_amount
+}}元可用</view>
+      </view>
+      <view class='textinfori'>
+      <view class='toptit'>
+      <view class='lefttitmes'>
+      <view class='biaoti'>{{item.act_name}}</view>
+      <text class='riqi' style='font-size:20rpx;color:#d6d6d6;'>{{item.start_time}}  至 <br/> {{item.end_time}} 使用</text>
+      </view>
+      <view class='rightmes fr' bindtap="sureUserYHJ" data-act_id='{{item.act_id}}'>
+      <text>限量日内</text>
+      <text class='hongdi'>立即使用</text>
+      </view>
+      </view>
+      <view class='bottomtit'>
+     <text>全场平台通用</text>  
+      </view>
+      </view>
+</view>
+
+
+
+<view class="section" wx:for="{{yhjList}}" wx:if="{{currentNavtab < 1 && item.canUse ==2}}" >
+      
+      <view class='leftcon fl gary'>
+      <view class='leftconpric' style='font-size:32rpx;'>¥ 4元</view>
+      <view class='leftconpric'>满29元可用</view>
+      </view>
+      <view class='textinfori'>
+      <view class='toptit'>
+      <view class='lefttitmes'>
+      <view class='biaoti'>蔬菜红包</view>
+      <text class='riqi' style='font-size:20rpx;color:#d6d6d6;'>2018-10-10  23:32:00  至 <br/> 2018-10-12  23:33:00 使用</text>
+      </view>
+      <view class='rightmes fr'>
+      <text>限量日内</text>
+      <text class='hongdi'>已过期</text>
+      </view>
+      </view>
+      <view class='bottomtit'>
+     <text>全场“新鲜蔬菜”使用</text>  
+      </view>
+      </view>
+</view>
+  <!-- <button  wx:if="{{currentNavtab < 1}}" type='button' name='' class='js_btn' bindtap='sureUserYHJ'> 确认使用 </button>  -->

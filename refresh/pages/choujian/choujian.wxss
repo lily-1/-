@@ -1,0 +1,128 @@
+/* pages/shopcar/shopcar.wxss */
+.shopcar_banner{
+  width: 100%;
+  height: 278rpx;
+  position: relative;
+}
+.slide-image{
+  width:750rpx;
+  height: 278rpx;
+}
+.shopcar_banner image{
+  display: block;
+  width:750rpx;
+  height: 278rpx;
+}
+.shopcar_banner .banner_pos{
+  position: absolute;
+  width: 86%;
+  left: 7%;
+  bottom: -120rpx;
+  background-color:#fff;
+  -moz-box-shadow: 0px 5px 10px #e0e0e0; /* 老的 Firefox */
+  box-shadow: 0px 5px 10px #e0e0e0;
+}
+.shopcar_banner .banner_pos .all{
+  padding: 20rpx 34rpx 0;
+  font-size: 30rpx;
+  color: #5d5d5d;
+  line-height: 56rpx;
+}
+.shopcar_banner .banner_pos .ms{
+  font-size: 18rpx;
+  color: #939393;
+  line-height: 37rpx;
+  padding: 0 34rpx 20rpx;
+}
+.shopcar_banner .banner_pos .time{
+  border-top: 1rpx solid #e4e4e4;
+  padding: 20rpx 34rpx;
+  font-size: 24rpx;
+  color: #5d5d5d;
+  line-height: 58rpx;
+}
+
+/*列表  */
+.shopcar_list{
+  margin: 10rpx 0 0;
+}
+
+.shop_head{
+  position: relative
+}
+.shop_head .head_text{
+  text-align: center;
+  font-size: 40rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #00cb27;
+}
+.shop_head .head_l{
+  position: absolute;
+  left: 22%;
+  width: 82rpx;
+  height: 2rpx;
+  background-color: #999999;
+  top: 44rpx;
+}
+.shop_head .head_r{
+  position: absolute;
+  right: 22%;
+  width: 82rpx;
+  height: 2rpx;
+  background-color: #999999;
+  top: 44rpx;
+}
+.shopcar_list .shopcar_list_detail{
+  float: left;
+  width: 335rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  background-color:#fff;
+  -moz-box-shadow: 0px 5px 10px #e0e0e0; /* 老的 Firefox */
+  box-shadow: 0px 5px 10px #e0e0e0;
+  box-sizing: border-box;
+}
+.shopcar_list .shopcar_list_detail image{
+  display: block;
+  width: 335rpx;
+  height: 221rpx;
+}
+.shopcar_list .shopcar_list_detail .detail_name{
+  padding-left: 30rpx;
+  font-size: 22rpx;
+  color: #6a6a6a;
+  line-height: 57rpx;
+ 
+}
+.shopcar_list .shopcar_list_detail .detail_name1{
+  padding-left: 30rpx;
+  font-size: 24rpx;
+  color: #fb3d3c;
+  line-height: 57rpx;
+  
+}
+.fr{float: right ! important;}
+.cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.btn{
+  overflow: hidden;
+  margin: 0 2% 20rpx;
+}
+.btn .btn_l{
+  float: left;
+  width: 45%;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  color: #75be0d;
+}
+.btn .btn_r{
+  float: right;
+  width: 45%;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  color: #75be0d;
+}

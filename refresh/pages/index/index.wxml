@@ -1,0 +1,91 @@
+<!--pages/index1/index1.wxml-->
+<view class='header'>
+  <image class='log' src='/images/logo_03.png'></image>
+  <view class='index-header'>
+    <view class='header_adderss' bindtap='gotoAddress'>
+      {{market_name}}
+    </view>
+    <view class='header_sear'>
+      <input type='text' placeholder='请输入' bindtap='search'></input>
+      <image src='/images/sear_03.png'></image>
+    </view>
+  </view>
+  <!-- <view class='xixin'> -->
+  <!-- <contact-button 
+    type="default-dark" 
+    size="20"
+    session-from="weapp"
+  >
+  </contact-button> -->
+    <!-- <image src='/images/xinxi_03.png'></image>
+  </view> -->
+  
+</view>
+<!--banner  -->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" 
+    indicatorDots="{{true}}" circular="{{true}}" style='margin-top: 110rpx;'>
+  <block wx:for="{{headImageList}}">
+    <swiper-item>
+      <image src="{{headImageUrl}}{{item.ad_code}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--分类  -->
+<view class='list' style='height:350rpx;'>
+  <view class='list_li' wx:for="{{cateList}}" bindtap='fclass_url' data-cat_id='{{item.cat_id}}'>
+    <image src='{{cateImageUrl}}{{item.img_url?item.img_url:"zanwu.png"}}'></image>
+    <view class='list_text'>{{item.cat_name}}</view>
+  </view>
+</view>
+<!--消息提示  -->
+<swiper class='swipermgs' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="{{true}}" circular="{{true}}">
+  <block wx:for="{{message}}">
+    <swiper-item>
+      <view><text>头条</text><image src='/images/msg.png'></image>{{item}}</view>
+    </swiper-item>
+  </block>
+</swiper>
+<!--  -->
+<view class='advertis'>
+  <image bindtap='yiyuancai' style='float:left' src='/images/111_03.jpg'  width="320" height="191"></image>
+  <image bindtap='choujian' style='float:right' src='/images/index_28.png' width="320" height="191"></image>
+</view>
+<!--商品列表  -->
+<view class='shop'>
+  <view class='shop_head'>
+    <view class='head_l'></view>
+    <view class='head_text'>猜你喜欢</view>
+    <view class='head_r'></view>
+  </view>
+  <view class='shop_li'>
+
+    <view class='li_detail' wx:for="{{list}}">
+      <view class='li_detail_image'>
+        <image bindtap='detailURL'
+                          data-goods_supplier_id='{{item.goods_supplier_id}}'
+                          data-goods_id="{{item.goods_id}}"
+       src='{{baseUrl}}{{item.goods_thumb}}'></image>
+      </view>
+      <view class='li_detail_r'>
+        <view class='detail_h2'>{{item.goods_name}}</view>
+        <view class='detail_pric1'>已售：<text>{{item.yishou_number}}</text>份</view>
+        <view  class='detail_pric1'>规格：<text>{{item.goods_brief}}</text></view>
+        <view class='detail_pric'>¥{{item.sale_price}}</view>
+   
+          <view class="li_detail_rr" bindtap='addCart' 
+                          data-goods_supplier_id='{{item.goods_supplier_id}}' 
+                          data-supplier_id='{{item.supplier_id}}' 
+                          data-goods_id="{{item.goods_id}}"
+                          data-cat_id="{{item.cat_id}}"
+                          >+</view>
+      </view>
+      <view class='border_line'></view>
+    </view>
+    
+   
+  </view>
+</view>
+<include src ="../public/authority/authority"/>
+<include src ="../public/openSetting/openSetting"/>

@@ -1,0 +1,15 @@
+/* pages/news/news.wxss */
+.news{
+  margin: 30rpx 30rpx 0;
+}
+.news image{
+  float: left;
+  width: 90rpx;
+  height: 90rpx;
+}
+.news .newstext{
+  margin-left: 120rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #000000;
+}

@@ -1,0 +1,234 @@
+/* pages/index1/index1.wxss */
+/*banner  */
+swiper{
+  height: 276rpx;
+}
+swiper image{
+  width: 100%;
+  height: 278rpx;
+}
+/*分类  */
+.list{
+  margin: 60rpx 30rpx 40rpx;
+  overflow: hidden;
+}
+.list .list_li{
+  float: left;
+  width: 25%;
+}
+.list .list_li image{
+  display: block;
+  margin: 0 auto;
+  width: 102rpx;
+  height: 102rpx;
+}
+.list .list_li .list_text{
+  text-align: center;
+  font-size: 24rpx;
+  color: #000000;
+  line-height: 80rpx;
+}
+.shop .shop_li .li_detail .li_detail_r .yishou{
+  font-size: 18rpx;
+  color: #010101;
+  line-height: 18rpx;
+}
+/*商品  */
+.shop{
+  margin: 0 30rpx 30rpx;
+}
+.shop .shop_head{
+  position: relative
+}
+.shop .shop_head .head_text{
+  text-align: center;
+  font-size: 40rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #00cb27;
+}
+.shop .shop_head .head_l{
+  position: absolute;
+  left: 22%;
+  width: 82rpx;
+  height: 2rpx;
+  background-color: #999999;
+  top: 44rpx;
+}
+.shop .shop_head .head_r{
+  position: absolute;
+  right: 22%;
+  width: 82rpx;
+  height: 2rpx;
+  background-color: #999999;
+  top: 44rpx;
+}
+
+.shop .shop_li .li_detail{
+  overflow: hidden;
+  margin: 20rpx 0;
+}
+.shop .shop_li .li_detail image{
+  float: left;
+  width: 162rpx;
+  height: 162rpx;
+  /* border:2rpx solid #b6b6b6; */
+}
+.shop .shop_li .li_detail .li_detail_r{
+  margin-left: 182rpx;
+  position: relative;
+}
+.shop .shop_li .li_detail .li_detail_r .detail_h2{
+  font-size: 30rpx;
+  line-height: 64rpx;
+  color: #585858;
+}
+.shop .shop_li .li_detail .li_detail_r .detail_pric1{
+  font-size: 23rpx;
+  color: #010101;
+  line-height: 23rpx;
+  margin-top: 5rpx;
+}
+.shop .shop_li .li_detail .li_detail_r .detail_pric1 text{
+  color: #ff1919;
+}
+.
+.shop .shop_li .li_detail .li_detail_r .detail_pric1 text{
+  color: #ff1919;
+}
+.shop .shop_li .li_detail .li_detail_r .detail_pric{
+  font-size: 30rpx;
+  line-height: 48rpx;
+  color: #ff1919;
+}
+.shop .shop_li .li_detail .li_detail_r .li_detail_rr{
+  position: absolute;
+  background-color: #ff1919;
+  color: #ffffff;
+  text-align: center;
+  font-size: 45rpx;
+  line-height: 45rpx;
+  height: 50rpx;
+  width: 50rpx;
+  right: 0;
+  top:50%;
+  margin-top: -25rpx;
+  border-radius: 50%;
+}
+/*消息提示  */
+.swipermgs{
+  padding: 0 30rpx;
+  height: 54rpx;
+  border-top: 2rpx solid #e9e9e9;
+  border-bottom: 2rpx solid #e9e9e9;
+  font-size: 24rpx;
+  line-height: 54rpx;
+  color: #000000;
+}
+.swipermgs text{
+  float: left;
+  font-size: 24rpx;
+  line-height: 54rpx;
+  color: #000000;
+  margin-right: 10rpx;
+}
+.swipermgs image{
+  float: left;
+  margin-right: 20rpx;
+  width: 35rpx;
+  height: 28rpx;
+  margin-top: 14.5rpx;
+}
+/*搜索  */
+.header{
+  overflow: hidden;
+  background-color: #75be0d;
+  padding: 49rpx 3% 11rpx;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 51rpx;
+  width: 94%;
+  z-index: 99999999;
+}
+.header .log{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 115rpx;
+  height: 48rpx;
+}
+.header .header_adderss{
+  font-size: 28rpx;
+  width: 25%;
+  margin-top: 10rpx;
+  overflow: hidden;
+  color: #fff;
+  vertical-align: middle;
+}
+.header .header_sear {
+  flex: 1;
+  background-color: #ffffff;
+  height: 51rpx;
+  border-radius: 25.5rpx;
+  position: relative;
+  padding-right:50rpx;
+  display: flex;
+}
+.header .header_sear input{
+  font-size:22rpx;
+  color:#aeaeae;
+  margin-top: 8rpx;
+  padding-left:20rpx;
+  flex: 1;
+}
+.header .header_sear image{
+  position: absolute;
+  right: 10rpx;
+  top: 12rpx;
+  width: 27rpx;
+  height: 27rpx;
+}
+.header .xixin{
+  float: right;
+  width: 15%;
+}
+.header .xixin image{
+  display: block;
+  width: 59rpx;
+  height: 51rpx;
+  margin: 0 auto;
+}
+.border_line{
+  border: 1rpx solid;
+  color: #e9e9e9;
+  height: 0rpx;
+  width: 100%;
+}
+/*  */
+.advertis{
+  overflow: hidden;
+  margin: 30rpx 30rpx 20rpx;
+}
+.advertis image{
+  width: 321rpx;
+  height: 191rpx;
+}
+@import "../public/authority/authority.wxss";
+/* 商品图片圆角 */
+.li_detail_image {
+  display:block;
+  height:162rpx;
+  width:162rpx;
+  float:left;
+  border-radius:90rpx;
+  overflow:hidden;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+/* 添加的首页header */
+.index-header {
+  display:flex;
+  flex-direction:row;
+  height:51rpx;
+}

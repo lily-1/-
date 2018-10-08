@@ -1,0 +1,12 @@
+<!--pages/address1/address1.wxml-->
+<!-- <view class='add'>+</view> -->
+<view class='myself'>
+  <view class='myself_list'>
+      <view class='t1'>
+        <text>昵称 183****1398</text>
+        <text>安徽 合肥市 蜀山区 xx路 xxx小区 ......</text>
+      </view>
+      <image class='im' src='/images/yjt_06.jpg'></image>
+    </view>
+  </view>
+  <button type='button' name='' class='js_btn'>+添加新地址</button>

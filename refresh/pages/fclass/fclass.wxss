@@ -1,0 +1,197 @@
+/* pages/fclass/fclass.wxss */
+/*头部搜索  */
+scroll-view{
+  width: 80%;
+}
+.seard{
+  overflow: hidden;
+  background-color: #75be0d;
+  padding: 20rpx 30rpx;
+}
+.seard .log{
+  width: 115rpx;
+  height: 48rpx;
+  float:left;
+}
+.seard .log image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.seard .header_sear{
+  margin-left: 135rpx;
+  background-color: #ffffff;
+  height: 51rpx;
+  border-radius: 25.5rpx;
+  position: relative;
+  padding-right:8%;
+  display: flex;
+}
+.seard .header_sear input{
+  font-size: 22rpx;
+  color: #aeaeae;
+  line-height:51prx; 
+  padding: 0 4%;
+  margin-top: 8rpx;
+  flex: 1;
+}
+.seard .header_sear image{
+  position: absolute;
+  right: 10rpx;
+  top: 12rpx;
+  width: 27rpx;
+  height: 27rpx;
+}
+.help-content{
+  overflow-x: hidden;
+  position:absolute; 
+  top:195rpx;
+  margin-left: 20%; 
+  background:#fff;
+  font-size:30rpx;
+  align-items:center;
+  border-radius:10rpx;
+  z-index:999;
+  flex-wrap: wrap;
+  /* border: 1rpx solid; */
+  bottom: 0;
+  background-color:rgba(0,0,0,0.3);
+  display:inline-block;
+}
+.help-text{
+  padding: 2rpx 30rpx 2rpx 30rpx;
+  border-radius: 10rpx;
+  margin: 10rpx 5rpx 0 5rpx;
+  display: inline-block;
+  background:#d2d2d2;
+  color: #3c3c3c;
+}
+
+/* 添加颜色 */
+.classify-list{
+  background: #fff;
+  padding: 20rpx;
+}
+
+
+/*选项卡  */
+.tab-h{
+  width: 100%; 
+  box-sizing: 
+  border-box;
+  overflow: hidden;
+  line-height: 64rpx;
+  background: #ffffff; 
+  font-size: 16px; 
+  white-space: nowrap;
+  position: absolute;
+  top: 91rpx; 
+  /* left:0; */
+  z-index: 99;
+  padding: 20rpx 3%;
+  border-bottom: 1px solid #F2F2F2;
+  }
+.tab-item{padding:0 36rpx;display: inline-block;height: 64rpx;position: relative;}
+.tab-item.active{color: #ffffff;position: relative;background-color: #75be0d;border-radius: 32rpx;}
+.item-ans{ width: 100%;display: flex; flex-grow: row no-wrap;justify-content: space-between; padding: 30rpx;box-sizing: border-box; height: 180rpx;align-items: center;border-bottom: 1px solid #F2F2F2;float: right;}
+.avatar{width: 126rpx;height: 100rpx;position: relative;padding-right: 30rpx;}
+.avatar .img{width: 100%;height: 100%;}
+.avatar .doyen{width: 40rpx;height: 40rpx;position: absolute;bottom: -2px;right: 20rpx;}
+.expertInfo{font-size: 12px;flex-grow: 2;color: #414141;line-height: 1.5em;}
+.expertInfo .name{font-size: 16px;color:#414141;margin-bottom: 6px;}
+.askBtn{ width: 60rpx;height: 60rpx;line-height: 60rpx;text-align: center;font-size: 48rpx; border-radius: 60rpx;color:#ffffff;background-color: #ff1919;}
+.tab-content {
+  position:fixed;
+  background-color:#fff;
+  top:197rpx;
+  width:100%;
+  height:100%;
+  z-index:1;
+  overflow-x:hidden;
+}
+.scoll-h{
+  height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  }
+.expertInfo .t1{background-color: #ff1919;color: #ffffff;padding: 0 5rpx;border-radius: 7rpx;}
+.expertInfo .t2{text-decoration:line-through;color: #414141}
+.answerHistory{color: #ff0000;}
+.item-anl{width: 20%;overflow-y: scroll;height: 97%;background-color: #eeeeee;position: fixed;left: 0;top: 29rpx;padding: 0 0 3% 0;}
+.item-anl .item-anl_nr{position: relative;text-align: center;line-height: 60rpx;font-size: 30rpx;color: #010101;padding: 10rpx 0 10rpx 1%;}
+.item-anl .active{background-color: #ffffff;color: #010101;border-left: 13rpx solid #75be0d;box-sizing: border-box;}
+
+/*  */
+.container{
+  margin: 0;
+}
+.top-tab{
+  width: 20%;
+  height: 930rpx;
+  background-color: #eeeeee;
+  color: #010101;
+  font-size: 28rpx;
+  margin: 0 0 8rpx 0;
+  z-index: 9999;
+  overflow-y: auto;
+}
+.toptab{
+  width: 100%;
+  text-align: center;
+  padding:20rpx 0;
+}
+.toptab.active{
+  color: #010101;
+  background-color: #ffffff;
+  border-left: 13rpx solid #75be0d;
+  box-sizing: border-box;
+}
+.cont{
+  margin-bottom: 40rpx;
+}
+.ctnt0{
+  background-color: #fff;
+}
+.text-ts1{
+  font-size: 28rpx;
+  color: #858585;
+  line-height: 49rpx;
+  padding: 0 2%;
+  margin-bottom: 40rpx;
+}
+.fcla-yishou{
+  font-size: 24rpx;
+  color: #010101;
+  line-height: 30rpx;
+}
+.more{
+  display: inline-block;
+  position:absolute;
+  right:0rpx;
+  top:150;
+  background: #fff;
+  height:106rpx;
+  width:80rpx;
+  z-index:999;
+  text-align: center;
+  line-height: 106rpx;
+  border-left:#aeaeae 1rpx solid;
+}
+.imagesImg{
+  margin-top: 30rpx;
+  height: 56rpx;
+  line-height: 106rpx;
+  width:55rpx;
+}
+/* 树形滚动条 */
+page{
+  overflow-y: hidden;
+}
+
+/* 分类页面右边 */
+.classify-right{
+  flex: 1;
+  height: 930rpx;
+  overflow: hidden;
+}

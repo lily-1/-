@@ -1,0 +1,69 @@
+{
+  "pages":[
+    "pages/webchart/webchart",
+    "pages/index/index",
+    "pages/orderjs/orderjs",
+    "pages/yiyuancai/yiyuancai",
+    "pages/car/car",
+    "pages/fclass/fclass",
+    "pages/yhj/yhj",
+    "pages/goodsDetail/goodsDetail",
+    "pages/myorder/myorder",
+    "pages/my/my",
+    "pages/shopcar/shopcar",
+    "pages/choujian/choujian",
+    "pages/choujiandetail/choujiandetail",
+    "pages/addressList/addressList",
+    "pages/news/news",
+    "pages/shopdetail/shopdetail",
+    "pages/customer/customer",
+    "pages/menu/menu",
+    "pages/addCgi/addCgi",
+    "pages/search/search"
+  ],
+  "window":{
+    "backgroundColor":"#F6F6F6",
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#75be0d",
+    "navigationBarTitleText": "Wafer Quick Start",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#4e4e4e",
+    "selectedColor": "#4e4e4e",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "f5f5f5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/foot1_1.png",
+        "selectedIconPath": "images/foot1.png"
+      },
+      {
+        "pagePath": "pages/fclass/fclass",
+        "text": "分类",
+        "iconPath": "images/foot2.png",
+        "selectedIconPath": "images/foot2_1.png"
+      },
+      {
+        "pagePath": "pages/shopcar/shopcar",
+        "text": "吃出健康",
+        "iconPath": "images/foot3.png",
+        "selectedIconPath": "images/lrcp.png"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "text": "购物车",
+        "iconPath": "images/foot4.png",
+        "selectedIconPath": "images/gwce1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/foot5.png",
+        "selectedIconPath": "images/my.png"
+      }
+    ]
+  }
+}

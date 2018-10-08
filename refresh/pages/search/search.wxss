@@ -1,0 +1,61 @@
+/* pages/search/search.wxss */
+.header_sear{
+  overflow:hidden;
+  background-color:#75be0d;
+  padding:20rpx 3% 11rpx;
+  position:fixed;
+  left:0;
+  top:0;
+  height:51rpx;
+  width:94%;
+  z-index:99999999;                                           
+}
+.header_sear input {
+  font-size:28rpx;
+  color:#aeaeae;
+  line-height:51prx;
+  padding-left: 20rpx;
+  padding-right: 50rpx;
+  background:#fff;  
+  border-radius: 40rpx;
+}
+.header_sear image {
+  position:fixed;
+  right:40rpx;
+  top:30rpx;
+  width:27rpx;
+  height:27rpx;                   
+}
+/* 没有数据 */
+.noData{
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  width:90%;
+  margin:0 auto;
+  margin-top:50%;
+}
+.noData image{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 auto;
+}
+.noData text{
+  font-size:28rpx;
+  display:block;
+  line-height:45rpx;
+  margin-top:20rpx;
+  color: #666;
+  padding:0 100rpx;
+}
+.gotoIndex{
+  width:90%;
+border-radius:10rpx;
+height:80rpx;
+margin:0 auto;
+background:#75be0d;
+color:#fff;
+font-size:28rpx;
+line-height:80rpx;
+margin-top:20rpx;
+}

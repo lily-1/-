@@ -1,0 +1,38 @@
+<!--pages/shopdetail/shopdetail.wxml-->
+<!--banner  -->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" 
+    indicatorDots="{{true}}" circular="{{true}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='detail'>
+  <view class='name'>莴笋 1.1kg</view>
+  <view class='jieshao'>多种吃法美味加倍 保留部分笋叶</view>
+  <view class='pric'>4.38元/份</view>
+  <view class='miaoshu'>
+    <text>[商品描述]</text>
+    莴笋，又称莴苣、千金菜、青笋、莴菜、香莴笋、生菜等。产期：1-4月。莴苣原产地在地中海沿岸，大约在五世纪传入中国。地上茎可供食用，茎皮白绿色，茎肉质脆嫩，幼嫩茎翠绿，成熟后转变白绿色。主要食用肉质嫩茎，可生食、凉拌、炒食、干制或腌渍，嫩叶也可食用。茎、叶中含莴苣素，味苦，有镇痛的作用。莴笋的适应性强，可春秋两季或越冬栽培，以春季栽培为主，夏季收获。
+  </view>
+  <view class='miaoshu'>
+    <text>[营养价值]</text>
+    1、莴笋中的钾是钠的27倍，有利于促进排尿，维持水平衡，对高血压和心脏病患者有很大的裨益，2、莴笋中所含的氟元素，可参与牙釉和牙本质的形成，参与骨骼的生长。
+3、莴笋中的含碘量高，这对人体的基础代谢和体格发育，会产生有利的影响。
+  </view>
+</view>
+<view class='detail_pos'>
+  <view class='detail_posl'>
+    <view class='left_detail'>
+      <image src='/images/detail2.png'></image>
+      <view class='left_text'>购物车</view>
+    </view>
+    <view class='right_detail'>
+      <image src='/images/detail3.png'></image>
+      <view class='left_text'>收藏</view>
+    </view>
+  </view>
+  <view class='btn' bindtap='car_url'>加入购物车</view>
+</view>

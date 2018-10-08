@@ -1,0 +1,45 @@
+<!--pages/myorder/myorder.wxml-->
+<view class='seard'>
+  <!-- <view class='header_sear'>
+    <input type='text' placeholder='搜索商品'></input>
+    <image src='/images/sear_03.png'></image>
+  </view> -->
+</view>
+<view >
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">全部</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">待拣货</view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">待自提</view>
+        <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">配送中</view>
+        <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">已完成</view>
+        <!-- <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">待评价</view> -->
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{[0,1,2,3,4,5]}}">
+            <view class="scoll-h" >
+                      <view class="item-ans"  wx:for='{{orderList}}' >
+                          <view class='order_time'>订单号：{{item.order_sn}}   
+                          <view class='btn_order'> 支付时间：{{item.pay_time}}</view>
+                          </view>
+                          <view wx:for="{{item.goods_list}}" wx:for-item="itemGood">
+                              <view class="avatar">
+                                  <image class="img" src="{{baseUrl}}{{itemGood.goods_thumb}}" mode="aspectFit"></image>
+                              </view>
+                              <view class="expertInfo">
+                                <view class='left-one'>
+                                  <view class="name">{{itemGood.goods_name}}</view>
+                                  <view class="tag">¥{{itemGood.goods_price}}</view>
+                                </view>
+                                <view class='right-one'>x{{itemGood.goods_number}}</view>
+                              </view>
+                        </view>
+                          <view class='bottom-one'>
+                            <!-- <view class='btn_order'>再来一单</view> -->
+                            <view class='btn_order_right' wx:if="{{item.order_status == 1}}">待分拣</view>
+                          </view>
+                      </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

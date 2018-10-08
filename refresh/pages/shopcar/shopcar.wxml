@@ -1,0 +1,24 @@
+<!--pages/shopcar/shopcar.wxml-->
+<!-- <view class='shopcar_banner'>
+  <image src='/images/lanren_banner_02.png'></image>
+  <view class='banner_pos'>
+    <view class='all'>全部菜单</view>
+    <view class='ms'>天然新鲜菜,健康原生态。</view>
+    <view class='time'>配送时间：7:00——20:00</view>
+  </view>
+</view> -->
+<!--商品列表  -->
+<!-- <view class='shopcar_list cl'>
+  <view class='shopcar_list_detail' wx:for="{{shopcar_list}}" >
+    <image src='{{item.shopcar_img}}'  mode="aspectFit"></image>
+    <view class='detail_name'>{{item.shopcar_name}}</view>
+    <view class='detail_name1'>{{item.shopcar_name1}}</view>
+    <view class='btn'>
+      <view class='btn_l'>+加入购物车</view>
+      <view class='btn_r' bindtap='detailURL'>查看详情</view>
+    </view>
+  </view>
+</view> -->
+<view class='viewLanre'>
+<image class='imagew' src='{{baseUrl}}{{imgUrllanren}}'></image>
+</view>

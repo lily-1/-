@@ -1,0 +1,9 @@
+<!--获取权限  -->
+<view class='pos_fixed' wx:if="{{openSettingShow1 == true}}">
+  <view class='pos_cont'>
+    <view class='pos_conttext'>提示信息</view>
+    <button class='pos_btn'  open-type="openSetting">
+      重新获取授权信息
+    </button>
+  </view>
+</view>

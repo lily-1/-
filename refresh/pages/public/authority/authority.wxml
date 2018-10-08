@@ -1,0 +1,12 @@
+<!--获取权限  -->
+<view class='pos_fixed' wx:if="{{privateShow == true}}">
+  <view class='pos_cont'>
+    <view class='pos_conttext'>{{messagePrivate}}</view>
+    <button  class='pos_btn'  open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+      {{getUserInfoMation}}
+    </button>
+    <!-- <button  wx:if="{{openSettingShow == true}}" class='pos_btn'  open-type="openSetting">
+      {{openSetDataPrivate}}
+    </button> -->
+  </view>
+</view>

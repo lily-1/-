@@ -1,0 +1,94 @@
+/* pages/shopdetail/shopdetail.wxss */
+/*banner  */
+swiper{
+  height: 550rpx;
+}
+swiper image{
+  width: 100%;
+  height: 550rpx;
+}
+.detail{
+  margin: 40rpx 30rpx 0;
+  padding-bottom: 200rpx;
+}
+.detail .name{
+  font-size: 32rpx;
+  color: #000000;
+  line-height: 48rpx;
+}
+.detail .jieshao{
+  font-size: 32rpx;
+  color: #75be0d;
+  line-height: 48rpx;
+}
+.detail .pric{
+  font-size: 32rpx;
+  color: #ff0000;
+  line-height: 48rpx;
+}
+.detail .miaoshu{
+  margin-bottom: 20rpx;
+  font-size: 26rpx;
+  color: #000000;
+  line-height: 37rpx;
+}
+.detail .miaoshu text{
+  display: block;
+  font-size: 32rpx;
+  color: #000000;
+  line-height: 48rpx;
+}
+.detail_pos{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  height: 90rpx;
+  bottom: 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+.detail_pos .detail_posl{
+  float: left;
+  padding: 10rpx 3%;
+  width: 64%;
+  overflow: hidden;
+}
+.detail_pos .detail_posl .left_detail{
+  float: left;
+  width: 100rpx;
+}
+.detail_pos .detail_posl .left_detail image{
+  width: 45rpx;
+  height: 42rpx;
+  margin: 0 auto;
+  display: block;
+}
+.detail_pos .detail_posl .left_detail .left_text{
+  font-size: 24rpx;
+  color: #4e4e4e;
+  text-align: center;
+}
+.detail_pos .detail_posl .right_detail{
+  float: right;
+  width: 100rpx;
+}
+.detail_pos .detail_posl .right_detail image{
+  width: 45rpx;
+  height: 42rpx;
+  margin: 0 auto;
+  display: block;
+}
+.detail_pos .detail_posl .right_detail .left_text{
+  font-size: 24rpx;
+  color: #4e4e4e;
+  text-align: center;
+}
+.detail_pos .btn{
+  float: right;
+  width: 30%;
+  text-align: center;
+  line-height: 90rpx;
+  color: #ffffff;
+  font-size: 40rpx;
+  background-color: #75be0d;
+}

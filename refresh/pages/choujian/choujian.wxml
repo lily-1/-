@@ -1,0 +1,32 @@
+<!--pages/shopcar/shopcar.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" 
+    indicatorDots="{{true}}" circular="{{true}}" class='shopcar_banner'>
+  <block wx:for="{{headImageList}}">
+    <swiper-item>
+      <image src="{{headImageUrl}}{{item.ad_code}}" class="slide-image" mode="aspectFit"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--商品列表  -->
+<view class='shop_head'>
+    <view class='head_l'></view>
+    <view class='head_text'>今日抽检</view>
+    <view class='head_r'></view>
+ </view>
+<view class='shopcar_list cl'>
+  <view class='shopcar_list_detail' wx:for="{{list}}" >
+    <image src='{{baseUrl}}{{item.goods_thumb}}'  mode="aspectFit"></image>
+    
+    <view class='detail_name1'>{{item.goods_name}}</view>
+    <view class='detail_name'>已售：{{item.yishou_number}}/份</view>
+    <view class='detail_name'>规格：{{item.goods_brief}}</view>
+    <view class='detail_name'>价格：¥{{item.market_price}}</view>
+    <view class='btn'>
+      <view class='btn_l'  bindtap='addCart' 
+                          data-goods_id="{{item.goods_id}}"
+                          data-brand_id="{{item.brand_id}}">+加入购物车</view>
+      <view class='btn_r' bindtap='detailURL' id='{{item.goods_id}}'>查看详情</view>
+    </view>
+  </view>
+</view>

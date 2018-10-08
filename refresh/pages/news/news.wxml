@@ -1,0 +1,9 @@
+<!--pages/news/news.wxml-->
+<view class='news'>
+  <image src='/images/news.png'>news.png</image>
+  <view class='newstext'>客服服务</view>
+</view>
+<view class='news'>
+  <image src='/images/news1.png'>news.png</image>
+  <view class='newstext'>我的优惠券</view>
+</view>

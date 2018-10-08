@@ -1,0 +1,15 @@
+  <!--弹出窗  -->
+<!-- <view class='dialog' animation="{{animationData}}" wx:if="{{showModalStatus}}"> -->
+<view class='dialog' animation="{{animationData}}" wx:if="{{showFee == true}}">
+    <view class='makeWg'>
+          <view class='close'  bindtap="powerDrawer" data-statu="close">
+                <image src='/images/close.png'></image>
+          </view>
+          <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio" wx:for="{{listFee}}">
+                      <radio value="{{item.timedie}}" checked="{{item.checked}}"/>{{item.fee_name}}
+                </label>
+          </radio-group>
+          <button class='but' bindtap='bindspayMoney'>支付</button>
+    </view>
+</view>

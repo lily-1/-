@@ -1,0 +1,35 @@
+<!--pages/shopcar/shopcar.wxml-->
+<!--banner  -->
+<swiper mode="aspectFit" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" 
+    indicatorDots="{{true}}" circular="{{true}}" class='shopcar_banner'>
+  <block wx:for="{{headImageList}}">
+    <swiper-item>
+      <image src="{{headImageUrl}}{{item.ad_code}}" class="slide-image" mode="aspectFit"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--商品列表  -->
+<view class='shop'>
+  <view class='shop_head'>
+    <view class='head_l'></view>
+    <view class='head_text'>一元菜</view>
+    <view class='head_r'></view>
+  </view>
+  <view class='shop_li'>
+<!-- <template name="msgItem"> -->
+    <view class='li_detail' wx:for="{{list}}">
+      <image bindtap='detailURL' id='{{item.goods_id}}'  src="{{baseUrl}}{{item.goods_thumb}}"></image> 
+      <!-- <image src='{{team_im}}'></image> -->
+      <view class='li_detail_r'>
+        <view class='detail_h2'>{{item.goods_name}}</view>
+       <view class='detail_pric1'>已售：<text>{{item.yishou_number}}</text>份</view>
+        <view class='detail_pric1'>规格：<text>{{item.goods_brief}}</text></view>
+        <view class='detail_pric'>￥1.00</view>
+        <view class='li_detail_rr' bindtap='addCart' 
+                          data-goods_id="{{item.goods_id}}"
+                          data-brand_id="{{item.brand_id}}">+</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<view class='search'>
+  <view class='search-header'>
+    <view class='header_sear'>
+      <input type='text' placeholder='搜索商品' bindtap='search'></input>
+      <image src='/images/sear_03.png'></image>
+    </view>
+  </view>
+  <!-- 搜索没有数据 -->
+  <view class='noData'>
+    <image src='../../images/nodata_03.png'></image>
+    <text>不好意思没有找到您想要的商品，请换个关键字进行搜索</text>
+    <button class='gotoIndex'>去逛逛</button>
+  </view>
+  
+</view>

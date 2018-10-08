@@ -1,0 +1,16 @@
+<!--pages/customer/customer.wxml-->
+<view class='myhead'>
+  <view class='myhead_top'>
+    <view class='myhead_topdetail'>
+      <view class='left_one'>
+        <image src='/images/kf.png'></image>
+        <view class='left_text'>常见问题</view>
+      </view>
+      <view class='left_one'>
+        <image src='/images/kf1.png'></image>
+        <view class='left_text'>快速反馈</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='cus'>反馈历史</view>
